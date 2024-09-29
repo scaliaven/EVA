@@ -523,7 +523,7 @@ class EVAVisionTransformer(nn.Module):
                 return x[:, 0]
         return x
 
-    def forward(self, x, return_all_features=False):
+    def forward(self, x, return_all_features=True):
         if return_all_features:
             return self.forward_features(x, return_all_features)
         x = self.forward_features(x)
